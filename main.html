@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Rapport projet</title>
+    <link rel="stylesheet" href="gogo.css">
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="main.html">Accueil</a></li>
+            <li><a href="#missions">Missions</a></li>
+            <li><a href="#resultats">Resultats</a></li>
+            <li><a href="#difficultes">Difficultés</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+<main>
+    <section id = "accueil">
+        <h1> Rapport de SAE S1.04 : Creation d'une Base de Données</h1>
+        <p>Ressources liées à cette SAE : </p>
+            <ul>
+                <li> R1-02 : Développement d'interface web </li>
+                <li>R1-07 : Introduction aux bases de données et SQL </li>
+
+                <li> R1-09 ; Economie durable et numérique</li>
+            </ul>
+        <p> Le but du projet était de manipuler une base de données dans un
+            contexte économique liée à une entreprise répondant au nom de Kdou afin
+            de proposer des solutions "éco-friendly".</p>
+        <p> Ce site constitue le rapport de ce projet effectué par Gregory Jougom</p>
+        <p> Vous retrouverez la synthèse des missions effectuées et leurs résultats. </p>
+        <ul>
+            <li><a href="#requetes"> Les requetes effecutuées</a></li>
+            <li><a href="#indicateurs">Les 5 indicateurs</a></li>
+        </ul>
+        <p>Vous aurez par la suite également un apercu des éventuelles difficultés rencontrées</p>
+        <img src="images/serveur.jpg" alt="Image d'un serveur">
+    </section>
+
+    <section id="missions">
+        <h1>1- Missions de la SAE</h1>
+
+            <p>Il était question d'étudier la base de donnée suivante :</p>
+             <ul>
+             <img src="images/base.png" alt="Image de la base de donnée au format QBE">
+             </ul>
+             <section id ="requetes">
+                <p>Les différentes requètes effecutées:</p>
+
+                 <ol>
+                     <li>
+                 <p>Requete 1 : Recherche de tous les clients situés à Paris (triés par société)</p>
+                     <img src="images/requete1.png" alt="Capture d'écran de la requete SQL en question">
+                 <p>Renvoie une liste de clients beaucoup plus restreinte</p>
+                     </li>
+
+                     <li>
+                         <p>Requete 2 : Recherche des produits provenant des USA et coutant moins de 25 euros.</p>
+                         <img src="images/requete2.png" alt="Capture d'ecran de la requete SQL en question">
+                         <p>Cette requete a donc renvoyer une liste des produits concernés, de leur ville, de
+                             provenance et de leur fournisseur</p>
+                     </li>
+                     <li>
+                         <p>Requete 3 : Recherche de tous les fournisseurs proposant de la viande ou du poisson</p>
+                         <img src="images/requete3.png" alt="Capture d'écran de la requete SQL en question">
+                         <p>Cette requete renvoie donc le nom du produit étant donc du poisson ou de la viande,
+                             son fournisseur et le lieu de ce dernier.</p>
+                     </li>
+                     <li>
+                         <p>Requete 4 : On recherche les 3 dernières commandes de Max Deschamps </p>
+                         <img src="images/requete4.png" alt="Capture d'écran de la requete SQL en question">
+                        <p> Cette requete affiche donc la liste des 3 dernières commandes de
+                            M. Deschamps (via leur identifiant) suivi de la date de la commande.</p>
+                     </li>
+                 </ol>
+             </section>
+            <section id="indicateurs">
+                <p> Voici les 5 indicateurs à effectuer :</p>
+                <ol>
+                    <li>
+                        <p>Indicateur 1 : CA Total généré à ce jour avec les fournisseurs de l'UE</p>
+                        <p>On cherche ici à calculer le chiffre d’affaires effectué qu’avec des produits venants de pays membres de l’UE.
+
+                            Ça peut être intéressant pour définir si une région telle que l’UE apporte du CA à l’entreprise et a estimé son importance dans les revenus de l’entreprise.
+                        </p>
+                        <img src="images/indic1.png" alt="Capture d'écran de la requete SQL">
+                        <p>La requete suivante renvoie donc le CA de Kdou uniquement pour les fournisseurs provenant de l'Union Européenne</p>
+                    </li>
+                    <li>
+                        <p>Indicateur 2 : CA annuel pour les boissons et desserts.</p>
+                        <p>On cherche ici à calculer le chiffre d'affaires annuel généré uniquement par les ventes de produits appartenant aux catégories des desserts ou des boissons.
+                            Ça peut être intéressant pour observer l'évolution des ventes sur ces types de produits d'une année sur l'autre, et estimer s'il est pertinent pour l'entreprise de continuer à investir ou à faire des promotions sur ces catégories précises.
+                        </p>
+                        <img src="images/indic2.png" alt="Capture d'écran de la requete">
+                        <p>Cette requete renvoie une année suivi des chiffres d'affaires réalisés par les desserts et les boissons</p>
+                    </li>
+                    <li>
+                        <p>Indicateur 3 : Nombre de produits carnés (viandes) non commandés actuellement</p>
+                        <p>On cherche ici à compter le nombre de produits de la catégorie des viandes qui ne figurent actuellement dans aucune commande client.
+
+                            Ça peut être intéressant pour identifier les références qui dorment en stock ou qui ne se vendent pas du tout, afin d'aider l'entreprise à faire du tri dans son catalogue fournisseur et à réduire les coûts d'achat inutiles.
+                        </p>
+                        <img src="images/idic3.png" alt="Capture d'écran de la requete">
+                        <p>Cette requête renvoie donc le nombre de produits carnés n'étant dans aucune commande</p>
+                    </li>
+                    <li>
+                        <p>Indicateur 4 : Clients pilotes ayant autant de commandes que leurs partenaires</p>
+                        <p>On cherche ici à identifier les binômes de clients (un client pilote et son client partenaire associé) qui ont passé très exactement le même nombre de commandes globales.
+                            Ça peut être intéressant pour évaluer l'efficacité du système de partenariat, et voir si la relation entre les deux entreprises est équilibrée au
+                            point qu'elles adoptent le même rythme d'achat pour leurs commandes.</p>
+                        <img src="images/id5.png" alt="Capture d'écran de la requete">
+                        <p>Cette requete renvoie donc la liste des clients pilotes ayant passé le meme nombre de commandes que leurs partenaires</p>
+                    </li>
+                </ol>
+
+
+
+            </section>
+    </section>
+    <section id="resultats">
+        <h1>Résultats des indicateurs</h1>
+        <ul>
+            <li>
+                <p>Indicateurs 1 : CA membre de l'UE</p>
+                <img src="images/resindic1.png" alt="Resultats de l'indicateur 1">
+                <p>Le chiffre d'affaires recherché vaut donc environ 2 946 000 EUROS ce qui représente beaucoup d'argent  </p>
+            </li>
+            <li>
+                <p>Indicateur 2 / CA Annuel boissons & dessert </p>
+                <img src="images/resid2.png" alt="Resultats de l'indic 2">
+                <p>Par probleme d'affichage d'Acces seule une valeur et visible à la fois,
+                    mais le CA augmente au fil des années. </p>
+            </li>
+            <li>
+                <p>Indicateur 3 : Produits carnés non commandés</p>
+                <img src="images/resid3.png" alt="Resultats de l'indicateur 3">
+                <p>Seuls 2 produits carnés ne sont dans aucune commande actuellement,
+                    les stocks sont donc globalement bien gérés</p>
+            </li>
+            <li>
+                <p>Indicateur 4 : Relations client pilotes, clients partenaire.</p>*
+                <img src="images/resid5.png" alt="Résultats de l'indicateur 5">
+                <p>Seuls le Nostradamu et Petite Epicerie ont le meme nombre de commandes, prouvant alors que les partenariats
+                    ne sont peut etre pas si rentables que ca </p>
+            </li>
+        </ul>
+
+
+    </section>
+    <section id="difficultes">
+        <h1> Difficultés rencontrées lors du travail et axes de travail.</h1>
+        <p>Au cours de mon travail, j'ai pu rencontrer certaines difficultés : </p>
+        <ol>
+            <li>Les noms des attributs dans la base :
+                <p>Certains attributs avec un nom composé de 2 mots sans espaces,
+                    pour la syntaxe en SQL c'etait compliquée de taper.</p>
+                <p>La solution a été de renommer les attributs et avec quelques recherches, j'ai
+                pu trouver qu'il était possible d'utiliser des [] dans nos requetes SQL.</p>
+            </li>
+            <li>
+                Indicateur Numéro 4 :
+                <p>L'indicateur numéro 4 s'est révélé tres compliqué en termes de compréhension et d'écriture</p>
+                <img src="images/id5.png" alt="Indicateur 5 (SQL)">
+                <p>Pour effectuer cette requête, on sélectionne la société (Societe) du client pilote et
+                    son nombre de commandes, ainsi que la société du client partenaire et son
+                    nombre de commandes. Ensuite de la table Clientele (renommée Pilote) on joint à nouveau la table
+                    Clientele (renommée Partenaire) sur le code client partenaire (CodeCli vers CodeCliPart). On y joint
+                    t ensuite deux sous-requêtes qui comptent le nombre total de commandes ([N° commande]) par client dans la
+                    table Commande : la première jointe sur le code client du pilote (CodeCli), la seconde jointe sur le c
+                    ode client du partenaire. Et on restreint le tout par la condition « WHERE »
+                    le nombre de commandes calculé du pilote est égal à celui de
+                    son partenaire. De là, on obtient la liste des binômes respectant cette stricte égalité</p>
+                <p>Les jointures et les "AS" a effecuté ont été plus compliqué que tous les autres au cours du travail,
+                 le reste du projet a été globalement plutot simple.</p>
+                <p> J'ai travaillé tout seul, sur ma machine personelle et avec l'aide du cours d'IBD et de DW</p>
+
+            </li>
+        </ol>
+
+    </section>
+</main>
+
+
+</body>
+
+<footer>
+    <p>Tout droits reservés à Gregory Jougom, IUT Paris Cité - Rives de Seine, BUT Informatique</p>
+</footer>
+</html>
